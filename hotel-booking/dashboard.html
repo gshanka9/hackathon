@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Dashboard</title>
+</head>
+<body>
+<h1>Error Author Dashboard</h1>
+<div id="author"></div>
+
+<script>
+    async function fetchAuthor() {
+        const response = await fetch('/author');
+        const data = await response.text();
+        document.getElementById('author').innerText = data;
+    }
+
+    fetchAuthor();
+</script>
+</body>
+</html>
